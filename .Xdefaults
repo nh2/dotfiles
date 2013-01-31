@@ -1,0 +1,85 @@
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hinstyle:   hintslight
+
+URxvt*saveLines: 50000
+
+# sudo wget https://github.com/muennich/urxvt-perls/raw/master/clipboard -O /usr/lib/urxvt/perl/clipboard
+# needs xsel
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 2
+URxvt*iso14755: False
+
+# Font sizes
+URxvt.keysym.C-0: command:\033]710;xft:Ubuntu Mono:size=12\007\033]711;xft:Ubuntu Mono:bold:size=12\007
+URxvt.keysym.C-plus: command:\033]710;xft:Ubuntu Mono:size=24\007\033]711;xft:Ubuntu Mono:bold:size=24\007
+URxvt.keysym.C-equal: command:\033]710;xft:Ubuntu Mono:size=48\007\033]711;xft:Ubuntu Mono:bold:size=48\007
+URxvt.keysym.C-minus: command:\033]710;xft:Ubuntu Mono:size=9\007\033]711;xft:Ubuntu Mono:bold:size=9\007
+
+urxvt*scrollTtyOutput: false
+urxvt*scrollTtyKeypress: true
+
+# URxvt*font: xft:Monospace:pixelsize=13.2
+# URxvt*boldFont: xft:Monospace:bold:pixelsize=13.2
+URxvt*font: xft:Ubuntu Mono:size=12
+URxvt*boldFont: xft:Ubuntu Mono:bold:size=12
+URxvt*letterSpace: -1  # Important for Ubuntu's Monospace font
+URxvt*scrollBar: false
+
+URxvt*scrollWithBuffer: true
+
+urxvt*termName:		rxvt-unicode
+
+urxvt*depth: 32
+
+# urxvt*foreground: #f2f2f2
+urxvt*foreground: #AAAAAA
+#urxvt*background: [90]black
+urxvt*background: rgba:0000/0000/0200/c800
+
+# Tango colors
+! Black
+*color0:  #2E3436
+*color8:  #555753
+! Red
+*color1:  #CC0000
+*color9:  #EF2929
+! Green
+*color2:  #4E9A06
+*color10: #8AE234
+! Yellow
+*color3:  #C4A000
+*color11: #FCE94F
+! Blue
+*color4:  #3465A4
+*color12: #729FCF
+! Purple
+*color5:  #75507B
+*color13: #AD7FA8
+! Cyan
+*color6:  #06989A
+*color14: #34E2E2
+! White
+*color7:  #AAAAAA
+*color15: #EEEEEC
+
+URxvt.keysym.Shift-Up:      \033[1;2A
+URxvt.keysym.Shift-Down:    \033[1;2B
+URxvt.keysym.Shift-Left:    \033[1;2D
+URxvt.keysym.Shift-Right:   \033[1;2C
+
+URxvt.keysym.M-Down:        \033[1;3B
+URxvt.keysym.M-Up:          \033[1;3A
+URxvt.keysym.M-Left:        \033[1;3D
+URxvt.keysym.M-Right:       \033[1;3C
+
+URxvt.keysym.Control-Up:    \033[1;5A
+URxvt.keysym.Control-Down:  \033[1;5B
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
