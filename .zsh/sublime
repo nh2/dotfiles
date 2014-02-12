@@ -1,0 +1,11 @@
+if [ -e "$HOME/opt/sublime/Sublime Text 2" ]; then
+  export PATH="$HOME/opt/sublime/Sublime Text 2":$PATH
+  if [ $DISPLAY ]; then
+    export EDITOR="sublime_text -w"
+  fi
+fi
+
+# Really safe: Disables internet
+alias e='tsocks sublime_text'
+
+alias sublime_with_internet='sublime_text'

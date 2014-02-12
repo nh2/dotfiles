@@ -1,0 +1,2 @@
+# Disable core dumps
+ulimit -c 0

@@ -1,0 +1,30 @@
+export EDITOR=vim
+
+ex_path_add() {
+  if [ -e "$1" ]; then
+    export PATH="$1":$PATH
+  fi
+}
+
+command_exists () {
+    hash "$1" &> /dev/null
+}
+
+ex_path_add $HOME/opt/i3/bin
+ex_path_add $HOME/opt/all/bin
+ex_path_add $HOME/.gem/ruby/1.8/bin
+ex_path_add $HOME/scripts
+ex_path_add $HOME/bin
+
+ex_path_add $HOME/opt/node/bin
+ex_path_add $HOME/opt/pandoc/bin
+
+ex_path_add $HOME/opt/haskell-7.4/bin  # for GHC
+ex_path_add $HOME/opt/haskell-platform/bin  # for the platform
+ex_path_add $HOME/.cabal/bin
+
+ex_path_add $HOME/src/meld/meld-1.5.3/bin
+
+ex_path_add $HOME/src/lejos/leJOS_NXJ_0.9.1beta-3/bin
+
+ex_path_add /mnt/home-hdd/opt/go/bin
