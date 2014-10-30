@@ -129,8 +129,8 @@ alias cb0='cabal build --ghc-options=-O0'
 
 alias revb='cd ~/src/rb/reviewboard && source ~/python27env/bin/activate'
 
-alias cabalconfigfast='cabal configure --disable-library-profiling --disable-shared'
-alias cabalinstallfast='cabal install --disable-library-profiling --disable-shared --disable-documentation'
+alias cabalconfigfast='cabal configure --disable-library-profiling'
+alias cabalinstallfast='cabal install --disable-library-profiling --disable-documentation'
 
 # Rerun last command with r, override with re
 alias re='alias r="`history -n | tail -n1`"'
