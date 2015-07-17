@@ -35,10 +35,21 @@
   fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
   squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
   ri = rebase --interactive --autosquash
-  whitespaceremove = !sh -c 'git stash && git stash apply && git diff -w > git-whitespace.patch && git checkout . && git apply git-whitespace.patch && rm git-whitespace.patch'
+  ris = rebase --interactive --autosquash --autostash
+
+  # Usage: git signoff-rebase [base-commit]
+  # Usage: git signoff-rebase [base-commit]
+  signoff-rebase = "!EDITOR='sed -i -re s/^pick/e/' sh -c 'git rebase -i $1 && while test -f .git/rebase-merge/interactive; do git commit --amend --signoff --no-edit && git rebase --continue; done' -"
+  # Ideally we would use GIT_SEQUENCE_EDITOR in the above instead of EDITOR but that's not supported for git < 1.7.8.
+
+  addnw = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
 [branch]
   autosetuprebase = always
 [core]
   excludesfile = /home/niklas/.gitignore_global
 [rerere]
   enabled = true
+[gui]
+	editor = /home/niklas/bin/sublime_text_3
+[cola]
+	tabwidth = 4
