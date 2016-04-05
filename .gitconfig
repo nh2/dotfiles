@@ -32,8 +32,8 @@
   sp = stash --patch
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
   meld = !$HOME/src/git-meld/git-meld.pl
-  fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-  squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+  fixup = commit --fixup
+  squash = commit --squash
   ri = rebase --interactive --autosquash
   ris = rebase --interactive --autosquash --autostash
 
