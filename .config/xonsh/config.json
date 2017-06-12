@@ -1,0 +1,21 @@
+{
+  "xontribs": ["prompt_ret_code"],
+  "env": {
+    "COMPLETIONS_DISPLAY": "single",
+    "VC_BRANCH_TIMEOUT": "0.2",
+
+    "XONSH_GITSTATUS_HASH": ":",
+    "XONSH_GITSTATUS_BRANCH": "{CYAN}",
+    "XONSH_GITSTATUS_OPERATION": "{CYAN}",
+    "XONSH_GITSTATUS_STAGED": "{RED}● ",
+    "XONSH_GITSTATUS_CONFLICTS": " {RED}×",
+    "XONSH_GITSTATUS_CHANGED": " {BLUE}+",
+    "XONSH_GITSTATUS_UNTRACKED": " u…",
+    "XONSH_GITSTATUS_STASHED": "⚑",
+    "XONSH_GITSTATUS_CLEAN": "{BOLD_GREEN}✓",
+    "XONSH_GITSTATUS_AHEAD": "↑·",
+    "XONSH_GITSTATUS_BEHIND": "↓·",
+
+    "PROMPT": "\n{env_name:{} }{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd} {gitstatus}\n{BOLD_BLUE}{ret_code_color}{ret_code}{prompt_end}{NO_COLOR} "
+  }
+}
